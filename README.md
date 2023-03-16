@@ -1,23 +1,23 @@
-# TÍTULO DO PROJETO
+# TÍTULO DO PROJETO Projeto Série
 
-`CURSO`
+`CURSO`ADS PUC Minas
 
-`DISCIPLINA`
+`DISCIPLINA`Projeto
 
-`SEMESTRE`
+`SEMESTRE`Eixo 1
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
+* aluno 1 Luciano Clemente Cavalcante da Silva
+* aluno 2 Aaron Carvalho Babino
+* aluno 3 Arthur Alves de Souza Costa
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nome completo do professor 1 Professor de Projeto
 
 ## Instruções de utilização
 
