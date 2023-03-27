@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO Projeto Série
+# TÍTULO DO PROJETO Projeto Série (Imaginar um nome mais mercadológico para o projeto)
 
 `CURSO`ADS PUC Minas
 
@@ -6,25 +6,25 @@
 
 `SEMESTRE`Eixo 1
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.Aplicação didática simples. Problema: séries que não estão listadas segundo língua de origem são mais difíceis de encontrar na plataforma. Sugestão: organizar séries em listas orientadas. (Escrever o que significa isso em termos modestos).
 
 ## Integrantes
 
-* aluno 1 Luciano Clemente Cavalcante da Silva
+* aluno 1 Luciano Clemente Cavalcante da Silva (Dar formato de ordem alfabética)
 * aluno 2 Aaron Carvalho Babino
 * aluno 3 Arthur Alves de Souza Costa
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor: Marcos André Silveira Kutova
+* Nome completo do professor: Marcos André Silveira Kutova (Na dúvida, lembrar que o professor tem todas as respostas)
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação. (Aprendendo pelas aulas dos microfundamentos)
 
 # Documentação
-
+(Aprendendo pelas aulas dos microfundamentos)
 <ol>
 <li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
@@ -41,12 +41,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* Insira o endereço eletrônico público de acesso ao conteúdo publicado. (Perguntar como se faz isso)
 
 # Armazenamento do Código-Fonte
 
-* <a href="src/README.md">Código Fonte</a>
+* <a href="src/README.md">Código Fonte</a> (Aprender em breve)
 
 # Armazenamento da Apresentação
 
-* <a href="presentation/README.md">Apresentação da solução</a>
+* <a href="presentation/README.md">Apresentação da solução</a> (Aprender em breve)
