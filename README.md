@@ -2,7 +2,7 @@
 
 Análise e Desenvolvimento de Sistemas 
 
-Desenvolvimento de uma aplicação interativa Web Front-EndP
+Desenvolvimento de uma aplicação interativa Web Front-End
 
 Eixo 1 - Primeiro semestre de 2023
 
