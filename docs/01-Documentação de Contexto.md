@@ -1,6 +1,6 @@
 # Introdução
 
-Introduzimos aqui a informação geral descrvendo uma plataforma de streaming como um serviço que permite aos usuários assistir ou ouvir conteúdos digitais (como filmes, séries, programas de TV, música, podcasts, etc.) por meio da internet, em tempo real, sem a necessidade de baixar ou podendo baixar o conteúdo para o dispositivo. O conteúdo é transmitido diretamente para o dispositivo do usuário, que pode ser um computador, smartphone, tablet, Smart TV ou outro dispositivo conectado à internet.
+Introduzimos aqui a informação geral descrevendo uma plataforma de streaming como um serviço que permite aos usuários assistir ou ouvir conteúdos digitais (como filmes, séries, programas de TV, música, podcasts, etc.) por meio da internet, em tempo real, sem a necessidade de baixar ou podendo baixar o conteúdo para o dispositivo. O conteúdo é transmitido diretamente para o dispositivo do usuário, que pode ser um computador, smartphone, tablet, Smart TV ou outro dispositivo conectado à internet.
 
 As plataformas de streaming geralmente requerem uma assinatura paga, que dá ao usuário acesso a uma biblioteca de conteúdos. Algumas plataformas oferecem conteúdos gratuitos com anúncios, enquanto outras cobram uma taxa única por cada conteúdo acessado.
 
