@@ -4,7 +4,7 @@ Uma plataforma de streaming é um serviço que permite aos usuários assistir ou
 
 As plataformas de streaming geralmente requerem uma assinatura paga, que dá ao usuário acesso a uma biblioteca de conteúdos. Algumas plataformas oferecem conteúdos gratuitos com anúncios, enquanto outras cobram uma taxa única por cada conteúdo acessado.
 
-Algumas plataformas de streaming populares incluindo Netflix, Amazon Prime Video e Disney+, não oferecem ao usuário a experiência direta ter séries organizadas conforme a língua de origem de produção da obra. Lista de séries em espanhol, outra lista em grego, outra em russo, outra lista de séries em francês, por exemplo, como alternativas fáceis de escolhas orientadas pelo perfil de usuário logado.
+Algumas plataformas de streaming populares incluindo Netflix, Amazon Prime Video e Disney+, não oferecem ao usuário a experiência direta de ter séries organizadas conforme a língua de origem de produção da obra. Devia haver lista de séries em espanhol, outra lista em grego, outra em russo, outra lista de séries em francês, por exemplo, como alternativas fáceis de escolhas orientadas pelo perfil de usuário logado.
 
 O objetivo simples é o de orientar essas listas de séries segundo a língua de produção original da obra e criar memória automática de escolhas de séries já vistas, sugerindo séries a assistir relacionadas às escolhas do usuário. O projeto pode ser justificado pela necessidade de maior conforto e economia de tempo buscados pelo usuário antes de assistir às suas séries preferidas, o que vai garantir a ampliação do grau de satisfação individual do usuário em relação à plataforma na qual adquiriu assinatura de serviços de streaming. 
 
