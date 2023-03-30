@@ -12,7 +12,7 @@ O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries
 
 * Aaron Carvalho Babino
 * Arthur Alves de Souza Costa
-* Juan 
+* Juan Pereira Alves Andrade
 * Luciano Clemente Cavalcante da Silva
 
 ## Orientador
