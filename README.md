@@ -6,7 +6,7 @@ Desenvolvimento de uma aplicação interativa Web Front-End
 
 Eixo 1 - Primeiro semestre de 2023
 
-O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries segundo o idioma de origem em plataformas de filmes e séries, pois em muitas plataformas de streaming elas são mais difíceis de encontrar. Isso aumentará a personalização da experiência do usuário memorizando suas buscas e preferências de perfil individual logado. 
+O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries segundo idioma de origem em plataformas de filmes e séries, pois em muitas plataformas de streaming elas são mais difíceis de encontrar. Isso aumentará a personalização da experiência do usuário memorizando suas buscas e preferências de perfil individual logado. 
 
 ## Integrantes
 
