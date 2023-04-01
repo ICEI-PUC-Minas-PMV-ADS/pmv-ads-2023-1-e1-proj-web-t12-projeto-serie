@@ -6,7 +6,7 @@ Desenvolvimento de uma aplicação interativa Web Front-End
 
 Eixo 1 - Primeiro semestre de 2023
 
-O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries segundo língua de origem em plataformas de filmes e séries, pois em muitas plataformas de streaming elas são mais difíceis de encontrar. O projeto propõe-se a organizar séries em listas orientadas segundo a língua de uso em sua produção original e isso aumentará a personalização da experiência do usuário memorizando suas buscas e preferências de perfil individual logado. 
+O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries segundo o idioma de origem em plataformas de filmes e séries, pois em muitas plataformas de streaming elas são mais difíceis de encontrar. Isso aumentará a personalização da experiência do usuário memorizando suas buscas e preferências de perfil individual logado. 
 
 ## Integrantes
 
@@ -21,11 +21,11 @@ O projeto em desenvolvimento propõe-se a auxiliar usuários que busquem séries
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Assim que a primeira versão do sistema estiver disponível, deverá ser complementada com instruções de utilização. Descrever como instalar eventuais dependências e como executar a aplicação.
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https// ...)
+Deve-se informar o link onde a aplicação estiver disponível para acesso (por exemplo: https// ...)
 
-Quando houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+Quando houver usuário de teste, o login e a senha também deverão ser informados neste espaço (por exemplo: usuário - admin / senha - admin).
 
 O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
 
@@ -47,7 +47,7 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. (Perguntar como se faz isso)
+* Deve-se inserir o endereço eletrônico público de acesso ao conteúdo publicado. (Perguntar como se faz isso)
 
 # Armazenamento do Código-Fonte
 
