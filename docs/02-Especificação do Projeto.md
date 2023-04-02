@@ -40,7 +40,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-002| O site deverá seccionar e apresentar, em sua tela inicial, os conteúdos de mídia divididos por idioma de origem, ordenados do idioma mais buscado para o menos buscado | ALTA |
 |RF-003| O site deve permitir ao usuário pesquisar por um idioma específico e receber uma lista de mídias relacionadas ao mesmo | ALTA |
 |RF-004| O site deve permitir ao usuário visualizar de forma específica cada conteúdo de mídia, seja este um filme, série ou outro formato relacionado, podendo visualizar sua sinopse, dados técnicos, plataforma de streaming onde ele se encontra e avaliação geral do público (de 1 a 5 estrelas) | MÉDIA |
-|RF-005| O site deve permitir ao usuário avaliar o filme em uma nota de 1 a 5 estrelas | MÉDIA |
+|RF-005| O site deve permitir ao usuário avaliar a série em uma nota de 1 a 5 estrelas | MÉDIA |
 |RF-006| O site deve incluir um sistema de idiomas favoritos para posterior implementação de algoritmo de recomendação | BAIXA |
 |RF-007| O site deve incluir um sistema de mídias favoritas para posterior implementação de algoritmo de recomendação | BAIXA |
 
