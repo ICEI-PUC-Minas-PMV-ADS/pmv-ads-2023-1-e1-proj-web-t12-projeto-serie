@@ -42,37 +42,31 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
 
 ### Requisitos Funcionais
 
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
+|RF-001| O site deverá apresentar, em sua tela inicial, uma lista com variedade de conteúdos de mídia para streaming, populada via APIs externas | ALTA | 
+|RF-002| O site deverá seccionar e apresentar, em sua tela inicial, os conteúdos de mídia divididos por idioma de origem, ordenados do idioma mais buscado para o menos buscado | ALTA |
+|RF-003| O site deve permitir ao usuário pesquisar por um idioma específico e receber uma lista de mídias relacionadas ao mesmo | ALTA |
+|RF-004| O site deve permitir ao usuário visualizar de forma específica cada conteúdo de mídia, seja este um filme, série ou outro formato relacionado, podendo visualizar sua sinopse, dados técnicos, plataforma de streaming onde ele se encontra e avaliação geral do público (de 1 a 5 estrelas) | MÉDIA |
+|RF-005| O site deve permitir ao usuário avaliar o filme em uma nota de 1 a 5 estrelas | MÉDIA |
+|RF-006| O site deve incluir um sistema de idiomas favoritos para posterior implementação de algoritmo de recomendação | BAIXA |
+|RF-007| O site deve incluir um sistema de mídias favoritas para posterior implementação de algoritmo de recomendação | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku) | ALTA | 
+|RNF-002| O site deverá ser responsivo permitindo a visualização em um celular de forma adequada |  ALTA | 
+|RNF-003| O site deve ter bom nível de contraste entre os elementos da tela em conformidade |  MÉDIA | 
+|RNF-004| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) |  ALTA | 
+|RNF-005| O site deverá ser performático em desempenhar satisfatoriamente, independentemente dos recursos computacionais ou de rede do usuário |  MÉDIA | 
 
 ## Restrições
 
@@ -80,12 +74,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|01| O projeto deverá ser entregue no final do semestre letivo (eixo 1) |
+|02| O site deverá ser feito utilizando o ecossistema Javascript |
+|03| O site não deverá ter anúncios ou ser monetizado |
+|04| O site deverá ser desenvolvido através da metodologia SCRUM, estando vedada a alteração de metodologia durante o desenvolvimento |
+|05| O site não deverá depender de acesso a um backend, sendo todo armazenamento feito exclusivamente em Local Storage |
