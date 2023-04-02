@@ -8,7 +8,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Daniel Silveira tem 17 anos, é estudante, gosta de praticar esportes, viajar, sair com os amigos para ver um filme. Ele se frustra quando não consegue as coisas de forma rápida ou suas expectativas não são atendidas. Marcos busca por filmes divertidos que  o ajudem a relaxar após um dia de atividades para ver sozinho ou com amigos.
+Daniel Silveira tem 17 anos, é estudante, gosta de praticar esportes, viajar, sair com os amigos para ver um filme. Ele se frustra quando não consegue as coisas de forma rápida ou suas expectativas não são atendidas. Daniel busca por filmes divertidos que  o ajudem a relaxar após um dia de atividades para ver sozinho ou com amigos.
 
 Ana Silva tem 24 anos, é advogada. Ela gosta de ler livros de ficção, ver filmes e séries bem avaliados e gosta de ouvir MPB. Ela se frustra quando não encontra um filme específico na plataforma. Também não gosta quando não consegue achar o filme em sua língua original sem legenda. Ana  é apaixonada por filmes e sempre procura por novos filmes sucesso de crítica ou que filmes intrigantes que a faça pensar. 
 
