@@ -19,11 +19,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Ana Silva           |encontrar séries elogiadas pela crítica| ver séries que podem estar em premiações|
+|Ana Silva           |Encontrar séries elogiadas pela crítica| Ver séries que podem estar em premiações|
 |Administrador       |Filtro por avaliação da crítica     |Usuarios encontrarem séries aclamados facilmente |
-|Ana Silva           |pesquisa de diretores e atores      |poder encontrar séries com artistas que já gosta |
+|Ana Silva           |Pesquisa de diretores e atores      |Poder encontrar séries com artistas que já gosta |
 |Administrador       |Filtro por artistas                 |Usuarios encontrarem artistas conhecidos mais facil que podem ser séries que eles já gostem |
-|Daniel Silveira     |rápida escolha de séries baseadas em gêneros|ver séries do gênero entre amigos |
+|Daniel Silveira     |Rápida escolha de séries baseadas em gêneros|Ver séries do gênero entre amigos |
 |Administrador       |Filtro por genêro                   |Usuarios poderem escolher séries baseadas em uma categoria |
 
 ## Requisitos
