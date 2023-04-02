@@ -8,9 +8,9 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Daniel Silveira tem 17 anos, é estudante, gosta de praticar esportes, viajar, sair com os amigos para ver um filme. Ele se frustra quando não consegue as coisas de forma rápida ou suas expectativas não são atendidas. Daniel busca por filmes divertidos que  o ajudem a relaxar após um dia de atividades para ver sozinho ou com amigos.
+Daniel Silveira tem 17 anos, é estudante, gosta de praticar esportes, viajar, sair com os amigos para ver séries. Ele se frustra quando não consegue as coisas de forma rápida ou suas expectativas não são atendidas. Daniel busca por séries divertidas que  o ajudem a relaxar após um dia de atividades para ver sozinho ou com amigos.
 
-Ana Silva tem 24 anos, é advogada. Ela gosta de ler livros de ficção, ver filmes e séries bem avaliados e gosta de ouvir MPB. Ela se frustra quando não encontra um filme específico na plataforma. Também não gosta quando não consegue achar o filme em sua língua original sem legenda. Ana  é apaixonada por filmes e sempre procura por novos filmes sucesso de crítica ou que filmes intrigantes que a faça pensar. 
+Ana Silva tem 24 anos, é advogada. Ela gosta de ler livros de ficção, ver filmes e séries bem avaliados e gosta de ouvir MPB. Ela se frustra quando não encontra uma série específica na plataforma. Também não gosta quando não consegue achar uma série em seu idioma original sem legenda. Ana é apaixonada por séries e sempre procura por novos séries que sejam sucesso de crítica ou que filmes intrigantes que a faça pensar. 
 
 
 ## Histórias de Usuários
@@ -19,12 +19,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Ana Silva           |encontrar filmes elogiados pela crítica| ver filmes que podem estar em premiações|
-|Administrador       |Filtro por avaliação da crítica     |Usuarios encontrarem filmes aclamado facilmente |
-|Ana Silva           |pesquisa de diretores e atores      |poder encontrar filmes com artistas que já gosta |
-|Administrador       |Filtro por artistas                 |Usuarios encontrarem artistas conhecidos mais facil que podem ser filmes que eles já gostem |
-|Daniel Silveira     |rápida escolha de filmes baseado em gêneros|ver filmes do gênero entre amigos |
-|Administrador       |Filtro por genêro                   |Usuarios poderem escolherem filmes baseados em uma categoria |
+|Ana Silva           |encontrar séries elogiadas pela crítica| ver séries que podem estar em premiações|
+|Administrador       |Filtro por avaliação da crítica     |Usuarios encontrarem séries aclamados facilmente |
+|Ana Silva           |pesquisa de diretores e atores      |poder encontrar séries com artistas que já gosta |
+|Administrador       |Filtro por artistas                 |Usuarios encontrarem artistas conhecidos mais facil que podem ser séries que eles já gostem |
+|Daniel Silveira     |rápida escolha de séries baseadas em gêneros|ver séries do gênero entre amigos |
+|Administrador       |Filtro por genêro                   |Usuarios poderem escolher séries baseadas em uma categoria |
 
 ## Requisitos
 
