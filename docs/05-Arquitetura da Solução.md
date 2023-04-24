@@ -6,9 +6,9 @@ Nesta seção são apresentados os detalhes técnicos da solução criada pela e
 
 Os componentes que fazem parte da solução são apresentados na Figura 9.
 
-![Arquitetura da solução](arquitetura.png)
+<div align="center"><img src="arquitetura.png" alt="Arquitetura da solução"></img></div>
 
-<center>Figura 09 - Arquitetura da Solução</center>
+<p align="center">Figura 09 - Arquitetura da Solução</p>
 
 A solução implementada conta com os seguintes módulos:
 - **Navegador** - Interface básica do sistema  
