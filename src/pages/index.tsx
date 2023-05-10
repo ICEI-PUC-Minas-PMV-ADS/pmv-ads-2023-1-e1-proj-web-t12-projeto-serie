@@ -30,8 +30,8 @@ export default function Home({movieRes}: InferGetStaticPropsType<typeof getStati
         <div className='flex gap-4'>
         {movieRes.results.map((movie: movieType, index) => (
           <div className='flex w-auto' key={index}>
-            <p className='absolute top-60 w-24 text-xs'>{movie.title}</p>
-            <Image width={200} height={250} alt={movie.title} src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
+            <p className='absolute top-60 w-24 text-xs hidden md:inline-flex'>{movie.title}</p>
+            <Image className='object-fill h-250 w-250' width={200} height={250} alt={movie.title} src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
           </div>
         ))}
         </div>
