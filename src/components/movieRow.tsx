@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Movie from './movieCard';
 import { CaretCircleLeft, CaretCircleRight, CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { movieType } from '@/types/interfaces';
 
-type movieType = {
-  title: string
-  adult: boolean
-  poster_path: string
-
-}
 
 type RowType = {
   content: movieType[]
@@ -43,13 +38,17 @@ const MovieRow = (props: RowType) => {
           className='w-screen h-full whitespace-nowrap scroll-smooth scrollbar-hide relative overflow-x-hidden'
         >
           {movies.map((item, id) => (
-            <Movie key={id} image={item.poster_path} title={item.title} />
+            <Movie key={id} 
+              image={item.poster_path}  
+              title={item.title}
+              movieId={item.id}
+            />
           ))}
         </div>
 
           <CaretCircleRight color="#0a0a0a" weight="fill"
             onClick={slideRight}
-            className='bg-white right-5  rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
+            className='bg-white sm:right-36 right-5  rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
             size={40}
           />
       </div>

@@ -1,16 +1,18 @@
-import image from 'next/image'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type movieCardType={
   image: string,
   rating?: string
   title: string
+  movieId: number
 }
 
 export default function Movie(props: movieCardType) {
   return (
-    <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
+    <Link href={`/movie/${props.movieId}`}
+     className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
       <Image
         width={250}
         height={375}
@@ -21,6 +23,6 @@ export default function Movie(props: movieCardType) {
           {props.title}
         </p>
       </div>
-    </div>
+    </Link>
   )
 }

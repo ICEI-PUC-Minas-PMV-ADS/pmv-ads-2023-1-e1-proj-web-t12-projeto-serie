@@ -5,15 +5,9 @@ import TopNav from '@/components/topNav'
 import BottomNav from '@/components/bottomNav'
 import { title } from 'process'
 import MovieRow from '@/components/movieRow'
+import { movieType } from '@/types/interfaces'
 
 const inter = Inter({ subsets: ['latin'] })
-
-type movieType = {
-  title: string
-  adult: boolean
-  poster_path: string
-
-}
 
 type movieResType = {
   results: movieType[]
@@ -25,7 +19,7 @@ export default function Home({movieRes}: InferGetStaticPropsType<typeof getStati
   return (
     <main className='`${inter.className}`'>
       <TopNav />
-      <div className="flex min-h-screen flex-col items-center pr-28 pl-28">
+      <div className="flex min-h-screen flex-col items-center pr-28 pl-28 sm:flex-wrap">
         {/* <h1 className={`${inter.className}`}>Popular hoje</h1> */}
 
         <div className='flex-wrap gap-4 '>
