@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import TopNav from '@/components/topNav'
 import BottomNav from '@/components/bottomNav'
 import { title } from 'process'
+import MovieRow from '@/components/movieRow'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,15 +26,11 @@ export default function Home({movieRes}: InferGetStaticPropsType<typeof getStati
     <main className='`${inter.className}`'>
       <TopNav />
       <div className="flex min-h-screen flex-col items-center pr-28 pl-28">
-        <h1 className={`${inter.className}`}>Popular hoje</h1>
+        {/* <h1 className={`${inter.className}`}>Popular hoje</h1> */}
 
-        <div className='flex gap-4'>
-        {movieRes.results.map((movie: movieType, index) => (
-          <div className='flex w-auto' key={index}>
-            <p className='absolute top-60 w-24 text-xs hidden md:inline-flex'>{movie.title}</p>
-            <Image className='object-fill h-250 w-250' width={200} height={250} alt={movie.title} src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
-          </div>
-        ))}
+        <div className='flex-wrap gap-4 '>
+          <MovieRow key={1} content={movieRes.results} title="Populares" rowID={1} />
+       
         </div>
       </div>
       <BottomNav />
