@@ -116,12 +116,13 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                     <div className="flex gap-4 mt-4 flex-wrap">
                       {providers.results.BR.rent
                         ?.slice(0, 4)
-                        .map((provider: any) => {
+                        .map((provider: any, index: number) => {
                           return (
                             <img
                               className="w-12"
                               src={`https://image.tmdb.org/t/p/w500/${provider.logo_path}`}
                               alt={provider.provider_name + " logo"}
+                              key={"mobile-rent-provider-" + index}
                             />
                           );
                         })}
@@ -135,12 +136,13 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                     <div className="flex gap-4 mt-4 flex-wrap">
                       {providers.results.BR.buy
                         ?.slice(0, 4)
-                        .map((provider: any) => {
+                        .map((provider: any, index: number) => {
                           return (
                             <img
                               className="w-12"
                               src={`https://image.tmdb.org/t/p/w500/${provider.logo_path}`}
                               alt={provider.provider_name + " logo"}
+                              key={"mobile-buy-provider-" + index}
                             />
                           );
                         })}
@@ -213,12 +215,13 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                           <div className="flex gap-4 mt-4 flex-wrap">
                             {providers.results.BR.rent
                               ?.slice(0, 4)
-                              .map((provider: any) => {
+                              .map((provider: any, index: number) => {
                                 return (
                                   <img
                                     className="w-12"
                                     src={`https://image.tmdb.org/t/p/w500/${provider.logo_path}`}
                                     alt={provider.provider_name + " logo"}
+                                    key={"desktop-rent-provider-" + index}
                                   />
                                 );
                               })}
@@ -232,12 +235,13 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                           <div className="flex gap-4 mt-4 flex-wrap">
                             {providers.results.BR.buy
                               ?.slice(0, 4)
-                              .map((provider: any) => {
+                              .map((provider: any, index: number) => {
                                 return (
                                   <img
                                     className="w-12"
                                     src={`https://image.tmdb.org/t/p/w500/${provider.logo_path}`}
                                     alt={provider.provider_name + " logo"}
+                                    key={"desktop-buy-provider-" + index}
                                   />
                                 );
                               })}
