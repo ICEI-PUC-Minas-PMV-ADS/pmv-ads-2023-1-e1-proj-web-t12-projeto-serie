@@ -30,7 +30,7 @@ const MovieRow = (props: RowType) => {
       <div className='relative flex-wrap items-center group'>
       <CaretCircleLeft color="#0a0a0a" weight="fill"
           onClick={slideLeft}
-          className='bg-white left-3 md:left-5 rounded-full absolute opacity-50 hover:opacity-100 bottom-24 md:bottom-48 cursor-pointer z-10 group-hover:block'
+          className='bg-white left-3 md:left-5 rounded-full absolute opacity-50 hover:opacity-100 top-24 md:top-48 cursor-pointer z-10 group-hover:block'
           size={40}
         />
         <div
@@ -42,13 +42,15 @@ const MovieRow = (props: RowType) => {
               image={item.poster_path}  
               title={item.title}
               movieId={item.id}
+              rating={item.vote_average}
+              name={item.name}
             />
           ))}
         </div>
 
           <CaretCircleRight color="#0a0a0a" weight="fill"
             onClick={slideRight}
-            className='bg-white sm:right-36 right-5  rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
+            className='bg-white right-0 lg:right-7 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
             size={40}
           />
       </div>

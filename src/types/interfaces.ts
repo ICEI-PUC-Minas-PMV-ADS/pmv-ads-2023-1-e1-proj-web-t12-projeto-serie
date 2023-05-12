@@ -5,4 +5,6 @@ export type movieType = {
     original_language: string
     release_date: string
     id: number
+    vote_average: number
+    name: string
   }

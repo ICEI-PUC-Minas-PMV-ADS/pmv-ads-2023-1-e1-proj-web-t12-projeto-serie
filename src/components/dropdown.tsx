@@ -29,7 +29,7 @@
     <button
     type="button"
     data-dropdown-toggle="dropdown" 
-    className="flex-shrink-0 hidden z-10 md:inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+    className="flex-shrink-0 flex md:flex z-10 items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
     onClick={() => setIsOpen(!isOpen)}
     >
     {isSelected ?
@@ -53,7 +53,7 @@
     <button
     type="button"
     key={option.title}
-    className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+    className="flex items-center w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white "
     onClick={() => handleOptionClick(option)}
     >
     {option.title === 'Gênero' ? <FilmSlate size={32} color="#E9F4FF" /> : null}
