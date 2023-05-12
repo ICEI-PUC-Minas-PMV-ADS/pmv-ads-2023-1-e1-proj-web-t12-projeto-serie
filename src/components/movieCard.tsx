@@ -21,7 +21,7 @@ export default function Movie(props: movieCardType) {
   }
   return (
     <Link href={`/${type}/${props.movieId}`}
-      className='dark:bg-zinc-900 bg-gray-300 w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 hover:opacity-70'>
+      className='-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 hover:opacity-70'>
       <Image
         width={250}
         height={375}

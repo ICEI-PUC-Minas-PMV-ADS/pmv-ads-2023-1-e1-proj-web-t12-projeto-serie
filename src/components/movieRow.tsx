@@ -52,7 +52,7 @@ const MovieRow = (props: RowType) => {
 
           <CaretCircleRight color="#0a0a0a" weight="fill"
             onClick={slideRight}
-            className='bg-white right-0 lg:right-7 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
+            className='bg-white right-0 lg:right-7 xl:right-20 2xl:right-44 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 top-24 md:top-48 group-hover:block'
             size={40}
           />
       </div>
