@@ -44,6 +44,8 @@ const MovieRow = (props: RowType) => {
               movieId={item.id}
               rating={item.vote_average}
               name={item.name}
+              row={rowID}
+
             />
           ))}
         </div>

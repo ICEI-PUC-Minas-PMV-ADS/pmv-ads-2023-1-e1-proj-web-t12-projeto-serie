@@ -9,11 +9,18 @@ type movieCardType={
   title: string
   movieId: number
   name: string
+  row: number
 }
 
+let type = ""
 export default function Movie(props: movieCardType) {
+  if(props.row === 2){
+    type = "series"
+  }else{
+    type = "movie"
+  }
   return (
-    <Link href={`/movie/${props.movieId}`}
+    <Link href={`/${type}/${props.movieId}`}
       className='dark:bg-zinc-900 bg-gray-300 w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 hover:opacity-70'>
       <Image
         width={250}

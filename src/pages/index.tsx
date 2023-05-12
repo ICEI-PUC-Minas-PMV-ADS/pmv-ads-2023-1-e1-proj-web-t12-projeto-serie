@@ -15,6 +15,7 @@ type movieResType = {
  
 export default function Home({moviePop, SeriesPop}: InferGetStaticPropsType<typeof getStaticProps>) {
   console.log(SeriesPop);
+  console.log(moviePop);
 
   return (
     <main className="`${inter.className}`">
