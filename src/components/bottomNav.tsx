@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function BottomNav() {
   const router = useRouter();
-  console.log(router.pathname);
+  
   return (
     <nav className='flex justify-center items-center gap-8 md:gap-20 lg:gap-24 bottom-0 bg-slate-950 w-full p-4 sticky'>
       <Link href="/">

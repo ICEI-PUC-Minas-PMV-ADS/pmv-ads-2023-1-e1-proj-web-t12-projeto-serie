@@ -15,7 +15,10 @@
     --background-end-rgb: 31, 29, 54;
   }
 }
-
+.ph{
+  width: 30px;
+  height: 30px;
+}
 html{
   overflow-x: hidden;
 }
