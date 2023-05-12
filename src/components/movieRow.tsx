@@ -26,7 +26,7 @@ const MovieRow = (props: RowType) => {
 
   return (
     <>
-      <h2 id='title' className='text-white font-bold md:text-xl p-4 flex-wrap'>{title}</h2>
+      <h2 id='title' className='font-bold md:text-xl p-4 flex-wrap'>{title}</h2>
       <div className='relative flex-wrap items-center group'>
       <CaretCircleLeft color="#0a0a0a" weight="fill"
           onClick={slideLeft}

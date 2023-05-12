@@ -4,15 +4,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 67, 84, 103;
-  --background-end-rgb: 67, 84, 103;
+  --background-start-rgb: 235, 235, 237;
+  --background-end-rgb: 235, 235, 237;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 31, 29, 54;
-    --background-end-rgb: 31, 29, 54;
+    --background-start-rgb: 26, 31, 37;
+    --background-end-rgb: 26, 31, 37;
   }
 }
 .ph{
@@ -32,4 +32,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+svg{
+  /* fill: #000 */
 }

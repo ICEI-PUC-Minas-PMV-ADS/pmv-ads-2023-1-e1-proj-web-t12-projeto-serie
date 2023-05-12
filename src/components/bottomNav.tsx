@@ -8,13 +8,13 @@ export default function BottomNav() {
   const router = useRouter();
   
   return (
-    <nav className='flex justify-center items-center gap-8 md:gap-20 lg:gap-24 bottom-0 bg-slate-950 w-full p-4 sticky'>
+    <nav className='flex justify-center items-center gap-8 md:gap-20 lg:gap-24 bottom-0 dark:bg-zinc-900 bg-gray-300 w-full p-4 sticky'>
       <Link href="/">
         <div className="flex flex-col items-center justify-center ">
           {router.pathname === "/" ?
           <House size={32} color="#689775" weight="fill" />
           :
-          <House size={32} color="#e6e6e6" weight="duotone" />
+          <House size={32} className='fill-black dark:fill-white' weight="duotone" />
           }
           <p>Home</p>
         </div>
@@ -25,7 +25,7 @@ export default function BottomNav() {
           {router.pathname === "/match" ?
           <Fire size={32} color="#689775" weight="fill" />
           :
-          <Fire size={32} color="#e6e6e6" weight="duotone" />
+          <Fire size={32} className='fill-black dark:fill-white' weight="duotone" />
           }
         <p>Match</p>
         </div>
@@ -36,7 +36,7 @@ export default function BottomNav() {
           {router.pathname === "/surprise" ?
           <Confetti size={32} color="#689775" weight="fill" />
           :
-          <Confetti size={32} color="#e6e6e6" weight="duotone" />
+          <Confetti size={32} className='fill-black dark:fill-white' weight="duotone" />
           }
         <p>Surpresa</p>
         </div>
@@ -47,7 +47,7 @@ export default function BottomNav() {
           {router.pathname === "/search" ?
           <Binoculars size={32} color="#689775" weight="fill" />
           :
-          <Binoculars size={32} color="#e6e6e6" weight="duotone" />
+          <Binoculars size={32} className='fill-black dark:fill-white' weight="duotone" />
           }
       <p>Buscar</p>
       </div>

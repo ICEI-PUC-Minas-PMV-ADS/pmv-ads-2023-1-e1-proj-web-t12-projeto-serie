@@ -33,8 +33,8 @@
     onClick={() => setIsOpen(!isOpen)}
     >
     {isSelected ?
-    <Funnel size={20} color="#E9F4FF" weight='fill' /> : 
-    <Funnel size={20} color="#E9F4FF"  />
+    <Funnel size={20} className='fill-black dark:fill-white' weight='fill' /> : 
+    <Funnel size={20} className='fill-black dark:fill-white'  />
     }
     <svg
     className="fill-current h-4 w-4 ml-2"
