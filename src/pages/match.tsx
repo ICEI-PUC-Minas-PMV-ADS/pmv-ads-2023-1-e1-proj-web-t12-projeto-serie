@@ -18,8 +18,11 @@ export default function match() {
       category:['Ação', 'Drama', 'Romance', 'Suspense', 'Terror'],    
   }
   const selectedThemes = []
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isHover1, setIsHover1] = useState(false);   
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isHover2, setIsHover2] = useState(false);   
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [loadMatch, setLoad] = useState(true);  
 
   //Styles
@@ -116,73 +119,71 @@ export default function match() {
   }
 
   return (
-    <>
-    <TopNav />
-    <>      
-      <main 
-        className="flex min-h-screen flex-col items-center pr-28 pl-28" 
+      <main >       
+        <TopNav />
+      <div   className="flex min-h-screen flex-col items-center pr-28 pl-28" 
         style={{
                     'backgroundColor': '#1A1F25', 
                     'color': 'white',
                     display: 'grid'
-                }}>       
+                }}>
       <div style={MainBlockStyle}>
             <div>
                 <h1>Escolhemos um entretenimento para você.</h1>
                 <p>Vamos fazer as perguntas, você escolhe qual combina com você e depois de 5 perguntas vamos indicar algo para você.</p>
             </div>
             <div>                    
-            <table style={TableStyle}>       
-                <tr style={{'display': 'contents', textAlign: 'center'}}>
-                    <thead>
-                        <td><h2 style={{'textAlign': 'left'}}>Qual você prefere?</h2></td>
-                        <td style={{textAlign: 'right'}}>                            
-                            <div style={{ width: '60px', height: '60px', marginBottom:'10px', 'textAlign': 'right'}}>                                
-                                <CircularProgressbar className="Counter" value={index} maxValue={5} text={`${index}/5`}/>                                                                    
-                            </div>
-                        </td>
-                    </thead>
-                </tr>  
-                <tr style={{'display': 'contents', textAlign: 'center'}}>
-                <tbody  className="Options">
+            <div style={TableStyle}>       
+                <div style={{'display': 'contents', textAlign: 'center'}}>
+                    <div>
+                        <div><h2 style={{'textAlign': 'left'}}>Qual você prefere?</h2></div>
+                        <div style={{textAlign: 'right'}}>                            
+                            {/* <div style={{ width: '60px', height: '60px', marginBottom:'10px', 'textAlign': 'right'}}>                                 */}
+                                {/* <CircularProgressbar className="Counter" value={index} maxValue={5} text={`${index}/5`}/>                                                                     */}
+                            {/* </div> */}
+                        </div>
+                    </div>
+                </div>  
+                <div style={{'display': 'contents', textAlign: 'center'}}>
+                <div  className="Options">
                 {loadMatch ?
                         (
                             <div style={{'display': 'contents', 'textAlign': 'center'}}>
-                                <td
+                                <div
                                     className='Option1' 
                                     style={TableLine1Style} 
                                     onClick={()=>changeIndex(1)}
                                     onMouseEnter={handleMouseEnterOption1}
                                     onMouseLeave={handleMouseLeaveOption1}>
                                         <h1>Teste 1</h1>                     
-                                </td>                        
-                                <td
+                                </div>                        
+                                <div
                                     className='Option2' 
                                     style={TableLine2Style} 
                                     onClick={()=>changeIndex(2)}
                                     onMouseEnter={handleMouseEnterOption2}
                                     onMouseLeave={handleMouseLeaveOption2}>
                                         <h1>Teste 2</h1>
-                                </td>
+                                </div>
                             </div>
                         )
                         :
                         (
-                            <td>
+                            <div>
                                 <Spinner  animation="border" role="status" style={{'display': 'contents', textAlign: 'center'}}>
                                     <span className="visually-hidden" >Loading...</span>
                                 </Spinner>
-                            </td>
+                            </div>
                         )
                     }
-                </tbody>
-                </tr>
-            </table>
+                </div>
+                </div>
             </div>
-        </div> 
+            </div>
+      </div> 
+      </div>
+        <BottomNav />
       </main>      
-    </>
-    <BottomNav />
-  </>
+
   )
 }
