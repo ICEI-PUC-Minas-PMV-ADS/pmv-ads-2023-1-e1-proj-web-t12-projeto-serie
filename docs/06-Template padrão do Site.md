@@ -1,12 +1,15 @@
 # Template padrão do site
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+Template do Site
+O padrão de layout a ser utilizado pelo site tem correspondência ao projeto de Interface elaborado anteriormente, conforme Figuras 5 a 8.
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+O template criado já foi implementado na versão final atual do site e está disponível na URL de acesso ao site, que foi supracitada. As telas a serem implementadas no fluxo do site são:
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+* Tela principal
+* Tela de filme
+* Tela de match
+* Tela de surpresa
+
+A responsividade foi implementada através da biblioteca tailwindCSS e através de um hook customizado do React, o “useViewport”, que permite a disponibilização de diferentes componentes de tela de acordo com a largura atual do viewport. Os ícones utilizados foram obtidos da biblioteca Phosphor Icons, que disponbiliza uma vasta gama de ícones para utilização em inúmeros frameworks.
+
+Algumas mudanças de UI diferem do template inicial disponibilizado no Projeto de Interface, como, por exemplo, a navbar que sofreu alterações de design, vide figura 10, na próxima seção.
