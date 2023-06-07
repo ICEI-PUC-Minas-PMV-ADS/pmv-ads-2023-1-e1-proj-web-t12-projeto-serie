@@ -28,22 +28,21 @@ const MovieRow = (props: RowType) => {
   };
 
   return (
-    <>
+      <div className="relative group w-screen lg:w-auto">
       <h2 id="title" className="font-bold md:text-xl p-4 flex-wrap">
         {title}
       </h2>
-      <div className="relative flex-wrap items-center group">
         <CaretCircleLeft
           color="#0a0a0a"
           weight="fill"
           onClick={slideLeft}
-          className="bg-white top-0 left-0 right-0 bottom-0 mr-auto ml-4 my-auto rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 group-hover:block"
+          className="bg-white top-0 left-0 bottom-0 mr-auto ml-4 my-auto rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 group-hover:block"
           size={40}
         />
-
+        <div className="parent-container relative">
         <div
           id={"slider" + rowID}
-          className="w-screen h-full whitespace-nowrap scroll-smooth scrollbar-hide relative overflow-x-hidden"
+          className="container scrollbar-hide whitespace-nowrap scroll-smooth scrollbar-hide relative overflow-x-hidden"
         >
           {movies.map((item, id) => (
             <Movie
@@ -57,16 +56,16 @@ const MovieRow = (props: RowType) => {
             />
           ))}
         </div>
+        </div>
 
         <CaretCircleRight
           color="#0a0a0a"
           weight="fill"
           onClick={slideRight}
-          className="bg-white top-0 left-0 right-0 bottom-0 ml-auto mr-4 my-auto rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 group-hover:block"
+          className="bg-white top-0 right-0 bottom-0 ml-auto mr-4 my-auto rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer hover:scale-110 z-10 group-hover:block"
           size={40}
         />
       </div>
-    </>
   );
 };
 

@@ -1,7 +1,10 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable @next/next/no-img-element */
 import BottomNav from "@/components/bottomNav";
 import TopNav from "@/components/topNav";
 import useViewport from "@/hooks/useViewport.hook";
 import { Star, TrendDown, TrendUp } from "@phosphor-icons/react";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
 export async function getServerSideProps(context: any) {
@@ -68,7 +71,7 @@ export default function MoviePage({
 
   useEffect(() => {
     setScore(Number(localStorage.getItem(`score-${movieId}`)) || 0);
-  }, []);
+  }, [movieId]);
 
   const vote = (score: number) => {
     localStorage.setItem(`score-${movieId}`, score.toString());
@@ -77,6 +80,17 @@ export default function MoviePage({
 
   return (
     <main className="min-h-screen flex flex-col">
+      <Head>
+        <meta
+          property="og:image"
+          content={`https://pmv-ads-2023-1-e1-proj-web-t12-projeto-serie.vercel.app/api/og?title=${movie.title}&image=${movie.poster_path}`}
+        />
+         <meta name='description' content='A ficha dos seus personagens preferidos' />
+          <meta property='og:title' content={movie.title} />
+          <meta property='og:description' content={movie.overview} />
+          <meta property='og:type' content='website' />
+          <title>{movie.title}</title>
+      </Head>
       <TopNav />
       {mobileScreen
         ? movie.success != false && (

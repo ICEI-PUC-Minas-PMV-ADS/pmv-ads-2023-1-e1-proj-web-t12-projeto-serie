@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from 'next/router'
 import { LocalProvider } from '@/hooks/useLocalStorage';
+import Footer from '@/components/footer';
 
 const progress = new ProgressBar({
   size: 4,
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return(
   <LocalProvider>
    <Component {...pageProps} />
+   <Footer />
   </LocalProvider>
   )
 }

@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function TopNav() {
   return (
-    <nav className='flex flex-col md:flex-row items-center md:justify-between w-full gap-4 p-5 md:pr-20 md:pl-20 dark:bg-zinc-900 bg-gray-300'>
+    <nav className='flex sticky z-50 top-0 flex-col md:flex-row items-center md:justify-between w-full gap-4 p-5 md:pr-20 md:pl-20 dark:bg-zinc-900 bg-gray-300'>
       <div className='sm:hidden xl:inline'>
         <Link href={"/"}>
        <Image

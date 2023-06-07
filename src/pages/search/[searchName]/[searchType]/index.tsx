@@ -7,6 +7,7 @@ import TopNav from '@/components/topNav';
 import BottomNav from '@/components/bottomNav';
 import { useState } from 'react';
 import { CircleNotch } from '@phosphor-icons/react';
+import Tooltip from '@/components/tolltip';
 
 type SearchResultsProps = {
     searchName: string;
@@ -78,9 +79,18 @@ export default function Search({
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
               <p>{movie.title}</p>
               <p>{movie.name}</p>
-              <p className='w-20 bg-black h-w-20 flex justify-center items-center rounded-full border-green-700 border-4 absolute z-20'>
-              {parseFloat((movie.vote_average * 10).toFixed(4)) } %
-              </p>
+              {parseFloat((movie.vote_average * 10).toFixed(4)) >= 60 ?
+              <div className='w-20 bg-black h-w-20 flex justify-center items-center rounded-full border-green-700 border-4 absolute z-20'>
+              <Tooltip text="Nota">
+               {parseFloat((movie.vote_average * 10).toFixed(4)) } %
+              </Tooltip>
+              </div>
+               : 
+               <div className='w-20 bg-black h-w-20 flex justify-center items-center rounded-full border-red-600 border-4 absolute z-20'>
+               <Tooltip text="Nota">
+                {parseFloat((movie.vote_average * 10).toFixed(4)) } %
+               </Tooltip>
+               </div>}
             </div>
           </Link>
         ))}
