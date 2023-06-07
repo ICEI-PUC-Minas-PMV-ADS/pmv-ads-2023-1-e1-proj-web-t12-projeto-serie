@@ -19,7 +19,7 @@ A tela principal do sistema apresenta uma lista de conteúdos de mídia, como fi
   2. A tela principal é a primeira funcionalidade exibida pelo website.
 
 ## Ver filme/série específica (RF-04)
-Ao clicar em um filme na tela principal ou ao buscar um filme pela barra de pesquisa, a tela a seguir permite com que o usuário veja informações mais detalhadas acerca do conteúdo de mídia buscado, como o nome completo, trailer do conteúdo, sinopse e avaliação do público. A tela foi desenvolvida pelo membro Arthur Costa.
+Ao clicar em um filme na tela principal ou ao buscar um filme pela barra de pesquisa, a tela a seguir permite com que o usuário veja informações mais detalhadas acerca do conteúdo de mídia buscado, como o nome completo, trailer do conteúdo, sinopse e avaliação do público. A tela permite também a avaliação do filme dando uma nota de 1 a 5. A tela foi desenvolvida pelo membro Arthur Costa.
 
  ![Tela de ver filme/série](img/tela-filme-07.png)
 
