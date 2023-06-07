@@ -1,5 +1,6 @@
-    import { Calendar, FilmSlate, Funnel, Star, TelevisionSimple } from '@phosphor-icons/react';
-    import { useState } from 'react';
+    import { LocalStorageContext } from '@/hooks/useLocalStorage';
+import { Calendar, FilmSlate, Funnel, Star, TelevisionSimple } from '@phosphor-icons/react';
+    import { useContext, useState } from 'react';
 
     interface DropdownOption {
     title: string;
@@ -13,6 +14,9 @@
 
 
     const Dropdown = ({ options, onChange }: DropdownProps) => {
+        const { selectedFilter, updateSelectedFilter } = useContext(LocalStorageContext);
+        console.log(selectedFilter);
+
     const [selectedOption, setSelectedOption] = useState(options[0]);
     const [isOpen, setIsOpen] = useState(false);
     const [isSelected, setIsSelected] = useState(false);
@@ -21,6 +25,16 @@
     setSelectedOption(option);
     setIsOpen(false);
     onChange(option);
+    let optionActived
+    switch (option.title){
+        case 'Filmes':
+            optionActived = "movie"
+        break;
+        case 'Séries':
+            optionActived = "series"
+            break;
+    }
+    localStorage.setItem('selectedFilter', optionActived || "");
     setIsSelected(true)
     };
 
@@ -46,7 +60,7 @@
     </button>
 
     {isOpen && (
-    <div id="dropdown" className="absolute top-16 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <div id="dropdown" className="absolute top-16 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 z-50">
     <ul className="py-2 text-sm text-gray-100 dark:text-gray-200" aria-labelledby="dropdown-button">
     {options.map((option) => (
     <li key={option.title} >
@@ -56,10 +70,11 @@
     className="flex items-center w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white "
     onClick={() => handleOptionClick(option)}
     >
-    {option.title === 'Gênero' ? <FilmSlate size={32} color="#E9F4FF" /> : null}
+    {option.title === 'Filmes' ? <FilmSlate size={32} color="#E9F4FF" /> : null}
     {option.title === 'Séries' ? <TelevisionSimple size={32} color="#E9F4FF" /> : null}
     {option.title === 'Celebridade' ? <Star size={32} color="#E9F4FF" /> : null}
     {option.title === 'Ano' ? <Calendar size={32} color="#E9F4FF" /> : null}
+
     <span className="ml-2">{option.title}</span>
     </button>
     </li>

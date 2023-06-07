@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { Funnel } from '@phosphor-icons/react'
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { movieType } from '@/types/interfaces';
 import Dropdown from './dropdown';
 import Link from 'next/link';
 
 export default function SearchBar() {
+    const router = useRouter();
     const [inputValue, setInputValue] = useState('');
     const [movieValue, setMovieValue] = useState([]);
     const [tvValue, setTvValue] = useState([]);
@@ -15,8 +16,8 @@ export default function SearchBar() {
     };
 
     function handleSearch(e: React.FormEvent<HTMLFormElement>){
-        // e.preventDefault() 
-        console.log("alo")
+        e.preventDefault() 
+        router.push(`/search/${inputValue}/movie`);
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,16 +33,14 @@ export default function SearchBar() {
     
         fetch(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&include_adult=false&language=pt-BR&page=1`, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmQ2NGZjZjA1NjI5NzgwNzM0OWJiM2RjZWZhMzVhMSIsInN1YiI6IjYyZTgyNzgyNzY0Yjk5MDA1ZWUyZThmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.323QPLRuoldEWXTShjCzLbkZfzwosQ0NRX7TZA1F9o0',
+            'Authorization': `Bearer ${process.env.TMDB_API_KEY}`,
             'accept': 'application/json'
         }
         })
         .then((response) => response.json())
           .then((data) => {
-            // Process the fetched data and update the content in Next.js
-            console.log(data.results);
             setMovieValue(data.results.slice(0,5))
-            // Update the content in Next.js state or Redux store, etc.
+            // Update the content in Next.js state
           })
           .catch((error) => {
             console.error('Error:', error);
@@ -49,7 +48,7 @@ export default function SearchBar() {
 
         fetch(`https://api.themoviedb.org/3/search/tv?query=${searchTerm}&include_adult=false&language=pt-BR&page=1`, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmQ2NGZjZjA1NjI5NzgwNzM0OWJiM2RjZWZhMzVhMSIsInN1YiI6IjYyZTgyNzgyNzY0Yjk5MDA1ZWUyZThmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.323QPLRuoldEWXTShjCzLbkZfzwosQ0NRX7TZA1F9o0',
+            'Authorization': `Bearer ${process.env.TMDB_API_KEY}`,
             'accept': 'application/json'
         }
         })
@@ -67,7 +66,7 @@ export default function SearchBar() {
     
 
     const options = [
-        { title: 'Gênero', icon: 'ph ph-funnel' },
+        { title: 'Filmes', icon: 'ph ph-funnel' },
         { title: 'Séries', icon: 'ph ph-funnel' },
         { title: 'Celebridade', icon: 'ph ph-funnel' },
         { title: 'Ano', icon: 'ph ph-funnel' },
