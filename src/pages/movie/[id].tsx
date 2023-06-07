@@ -2,7 +2,7 @@ import BottomNav from "@/components/bottomNav";
 import TopNav from "@/components/topNav";
 import useViewport from "@/hooks/useViewport.hook";
 import { Star, TrendDown, TrendUp } from "@phosphor-icons/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export async function getServerSideProps(context: any) {
   const movieId = context.query.id;
@@ -49,6 +49,7 @@ export async function getServerSideProps(context: any) {
 
   return {
     props: {
+      movieId,
       movie,
       providers,
       trailers,
@@ -56,11 +57,26 @@ export async function getServerSideProps(context: any) {
   };
 }
 
-export default function MoviePage({ movie, providers, trailers }: any) {
+export default function MoviePage({
+  movieId,
+  movie,
+  providers,
+  trailers,
+}: any) {
   const mobileScreen = useViewport();
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    setScore(Number(localStorage.getItem(`score-${movieId}`)) || 0);
+  }, []);
+
+  const vote = (score: number) => {
+    localStorage.setItem(`score-${movieId}`, score.toString());
+    setScore(score);
+  };
 
   return (
-    <main className="min-h-screen flex flex-col justify-between">
+    <main className="min-h-screen flex flex-col">
       <TopNav />
       {mobileScreen
         ? movie.success != false && (
@@ -73,7 +89,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                 />
 
                 <div className="flex flex-col gap-8 ml-4 w-full">
-                  <span className="text-white font-bold text-2xl flex items-center">
+                  <span className="dark:text-white font-bold text-2xl flex items-center">
                     {movie.title}
                   </span>
                   <span className="text-orange-400 font-bold text-2xl flex items-center">
@@ -93,6 +109,18 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                 </div>
               </div>
 
+              <div className="flex items-center justify-center text-xl">
+                <span className="mr-2">Minha nota:</span>
+
+                {[1, 2, 3, 4, 5].map((item) => (
+                  <Star
+                    className="mr-2"
+                    weight={score >= item ? "fill" : "regular"}
+                    onClick={() => vote(item)}
+                  />
+                ))}
+              </div>
+
               <iframe
                 className="mx-auto"
                 width="300"
@@ -105,12 +133,12 @@ export default function MoviePage({ movie, providers, trailers }: any) {
 
               {Object.keys(providers.results?.BR || {}).length ? (
                 <div className="ml-8">
-                  <span className="text-white font-bold text-2xl flex items-center">
+                  <span className="dark:text-white font-bold text-2xl flex items-center">
                     Assista agora:
                   </span>
 
                   <div className="mt-8">
-                    <span className="text-white font-semibold text-lg">
+                    <span className="dark:text-white font-semibold text-lg">
                       Assinatura
                     </span>
                     <div className="flex gap-4 mt-4 flex-wrap">
@@ -130,7 +158,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                   </div>
 
                   <div className="mt-4">
-                    <span className="text-white font-semibold text-lg">
+                    <span className="dark:text-white font-semibold text-lg">
                       Pago
                     </span>
                     <div className="flex gap-4 mt-4 flex-wrap">
@@ -150,7 +178,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                   </div>
                 </div>
               ) : (
-                <span className="text-white font-bold text-xl text-center px-4">
+                <span className="dark:text-white font-bold text-xl text-center px-4">
                   Esse filme está em cartaz ou não está disponível para
                   streaming no Brasil
                 </span>
@@ -163,7 +191,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
             </div>
           )
         : movie.success != false && (
-            <div className="flex flex-col mx-auto gap-10 w-3/5">
+            <div className="flex flex-col mx-auto my-auto py-10 gap-10 w-3/5">
               <div className="flex">
                 <img
                   className="h-[350px]"
@@ -173,7 +201,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
 
                 <div className="flex flex-col gap-8 ml-8 w-full">
                   <div className="flex gap-4">
-                    <span className="text-white font-bold text-2xl flex items-center">
+                    <span className="dark:text-white font-bold text-2xl flex items-center">
                       {movie.title}
                     </span>
                     <span className="text-orange-400 font-bold flex items-center">
@@ -193,6 +221,18 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                     )}
                   </div>
 
+                  <div className="flex items-center">
+                    <span className="mr-2">Minha nota:</span>
+
+                    {[1, 2, 3, 4, 5].map((item) => (
+                      <Star
+                        className="mr-2"
+                        weight={score >= item ? "fill" : "regular"}
+                        onClick={() => vote(item)}
+                      />
+                    ))}
+                  </div>
+
                   <div className="flex w-full h-full">
                     <iframe
                       className="w-4/5"
@@ -204,12 +244,12 @@ export default function MoviePage({ movie, providers, trailers }: any) {
 
                     {Object.keys(providers.results?.BR || {}).length ? (
                       <div className="ml-8">
-                        <span className="text-white font-bold text-2xl flex items-center">
+                        <span className="dark:text-white font-bold text-2xl flex items-center">
                           Assista agora:
                         </span>
 
                         <div className="mt-8">
-                          <span className="text-white font-semibold text-lg">
+                          <span className="dark:text-white font-semibold text-lg">
                             Assinatura
                           </span>
                           <div className="flex gap-4 mt-4 flex-wrap">
@@ -229,7 +269,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                         </div>
 
                         <div className="mt-4">
-                          <span className="text-white font-semibold text-lg">
+                          <span className="dark:text-white font-semibold text-lg">
                             Pago
                           </span>
                           <div className="flex gap-4 mt-4 flex-wrap">
@@ -250,7 +290,7 @@ export default function MoviePage({ movie, providers, trailers }: any) {
                       </div>
                     ) : (
                       <div className="ml-8 flex items-center w-1/3">
-                        <span className="text-white font-bold text-xl flex items-center">
+                        <span className="dark:text-white font-bold text-xl flex items-center">
                           Esse filme está em cartaz ou não está disponível para
                           streaming no Brasil
                         </span>
