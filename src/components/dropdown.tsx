@@ -15,7 +15,7 @@ import { Calendar, FilmSlate, Funnel, Star, TelevisionSimple } from '@phosphor-i
 
     const Dropdown = ({ options, onChange }: DropdownProps) => {
         const { selectedFilter, updateSelectedFilter } = useContext(LocalStorageContext);
-        console.log(selectedFilter);
+        // console.log(selectedFilter);
 
     const [selectedOption, setSelectedOption] = useState(options[0]);
     const [isOpen, setIsOpen] = useState(false);

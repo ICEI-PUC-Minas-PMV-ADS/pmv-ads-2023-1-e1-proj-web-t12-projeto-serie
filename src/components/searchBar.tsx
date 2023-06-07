@@ -12,7 +12,6 @@ export default function SearchBar() {
     const [tvValue, setTvValue] = useState([]);
 
     const handleOptionChange = (option: any) => {
-        console.log(option);
     };
 
     function handleSearch(e: React.FormEvent<HTMLFormElement>){
@@ -55,7 +54,6 @@ export default function SearchBar() {
         .then((response) => response.json())
           .then((data) => {
             // Process the fetched data and update the content in Next.js
-            console.log(data.results);
             setTvValue(data.results.slice(0,5))
             // Update the content in Next.js state or Redux store, etc.
           })
