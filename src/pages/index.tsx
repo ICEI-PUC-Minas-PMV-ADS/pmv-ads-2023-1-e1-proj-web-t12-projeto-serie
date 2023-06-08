@@ -14,8 +14,7 @@ type movieResType = {
 }
  
 export default function Home({moviePop, SeriesPop}: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(SeriesPop);
-  console.log(moviePop);
+
 
   return (
     <main className="`${inter.className}`">
@@ -44,7 +43,7 @@ export const getStaticProps = async () => {
   });
   const resSeriesPopular = await fetch('https://api.themoviedb.org/3/tv/top_rated?language=pt-BR&page=1', {
     headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmQ2NGZjZjA1NjI5NzgwNzM0OWJiM2RjZWZhMzVhMSIsInN1YiI6IjYyZTgyNzgyNzY0Yjk5MDA1ZWUyZThmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.323QPLRuoldEWXTShjCzLbkZfzwosQ0NRX7TZA1F9o0',
+        'Authorization': `Bearer ${process.env.TMDB_API_KEY}`,
         'accept': 'application/json'
     }
 });

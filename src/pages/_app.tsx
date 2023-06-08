@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from 'next/router'
+import { LocalProvider } from '@/hooks/useLocalStorage';
+import Footer from '@/components/footer';
 
 const progress = new ProgressBar({
   size: 4,
@@ -14,5 +16,10 @@ Router.events.on('routeChangeComplete', progress.finish)
 Router.events.on('routeChangeError', progress.finish)
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return(
+  <LocalProvider>
+   <Component {...pageProps} />
+   <Footer />
+  </LocalProvider>
+  )
 }

@@ -1,22 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
-import { Funnel } from '@phosphor-icons/react'
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { movieType } from '@/types/interfaces';
 import Dropdown from './dropdown';
 import Link from 'next/link';
 
 export default function SearchBar() {
+    const router = useRouter();
     const [inputValue, setInputValue] = useState('');
     const [movieValue, setMovieValue] = useState([]);
     const [tvValue, setTvValue] = useState([]);
 
     const handleOptionChange = (option: any) => {
-        console.log(option);
     };
 
     function handleSearch(e: React.FormEvent<HTMLFormElement>){
-        // e.preventDefault() 
-        console.log("alo")
+        e.preventDefault() 
+        router.push(`/search/${inputValue}/movie`);
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,16 +32,14 @@ export default function SearchBar() {
     
         fetch(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&include_adult=false&language=pt-BR&page=1`, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmQ2NGZjZjA1NjI5NzgwNzM0OWJiM2RjZWZhMzVhMSIsInN1YiI6IjYyZTgyNzgyNzY0Yjk5MDA1ZWUyZThmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.323QPLRuoldEWXTShjCzLbkZfzwosQ0NRX7TZA1F9o0',
+            'Authorization': `Bearer ${process.env.TMDB_API_KEY}`,
             'accept': 'application/json'
         }
         })
         .then((response) => response.json())
           .then((data) => {
-            // Process the fetched data and update the content in Next.js
-            console.log(data.results);
             setMovieValue(data.results.slice(0,5))
-            // Update the content in Next.js state or Redux store, etc.
+            // Update the content in Next.js state
           })
           .catch((error) => {
             console.error('Error:', error);
@@ -49,14 +47,13 @@ export default function SearchBar() {
 
         fetch(`https://api.themoviedb.org/3/search/tv?query=${searchTerm}&include_adult=false&language=pt-BR&page=1`, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmQ2NGZjZjA1NjI5NzgwNzM0OWJiM2RjZWZhMzVhMSIsInN1YiI6IjYyZTgyNzgyNzY0Yjk5MDA1ZWUyZThmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.323QPLRuoldEWXTShjCzLbkZfzwosQ0NRX7TZA1F9o0',
+            'Authorization': `Bearer ${process.env.TMDB_API_KEY}`,
             'accept': 'application/json'
         }
         })
         .then((response) => response.json())
           .then((data) => {
             // Process the fetched data and update the content in Next.js
-            console.log(data.results);
             setTvValue(data.results.slice(0,5))
             // Update the content in Next.js state or Redux store, etc.
           })
@@ -67,7 +64,7 @@ export default function SearchBar() {
     
 
     const options = [
-        { title: 'Gênero', icon: 'ph ph-funnel' },
+        { title: 'Filmes', icon: 'ph ph-funnel' },
         { title: 'Séries', icon: 'ph ph-funnel' },
         { title: 'Celebridade', icon: 'ph ph-funnel' },
         { title: 'Ano', icon: 'ph ph-funnel' },
@@ -114,7 +111,7 @@ export default function SearchBar() {
             </div>
             </div>
             <button type="submit" className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-red-600 border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" stroke-linejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 <span className="sr-only">Search</span>
             </button>
         </div>
