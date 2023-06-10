@@ -6,7 +6,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import MovieRow from "@/components/movieRow";
    
-export default function movieChoice(){    
+export default function MovieChoice(){    
     const themes = {    
         sort_by: [
                     'Popularidade', 

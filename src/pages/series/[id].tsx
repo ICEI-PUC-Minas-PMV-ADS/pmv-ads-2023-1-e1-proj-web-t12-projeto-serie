@@ -114,6 +114,7 @@ export default function MoviePage({
 
                 {[1, 2, 3, 4, 5].map((item) => (
                   <Star
+                  key={'star-' + item}
                     className="mr-2"
                     weight={score >= item ? "fill" : "regular"}
                     onClick={() => vote(item)}
@@ -226,6 +227,7 @@ export default function MoviePage({
 
                     {[1, 2, 3, 4, 5].map((item) => (
                       <Star
+                      key={'star'+item}
                         className="mr-2"
                         weight={score >= item ? "fill" : "regular"}
                         onClick={() => vote(item)}
