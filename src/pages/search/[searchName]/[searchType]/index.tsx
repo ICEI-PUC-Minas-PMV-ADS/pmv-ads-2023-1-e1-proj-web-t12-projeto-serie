@@ -83,8 +83,6 @@ export default function Search({
       const [data1, data2] = await Promise.all([res1, res2]).then((responses) =>
         Promise.all(responses.map((res) => res.json()))
       );
-      console.log(res2);
-      console.log(res1);
   
       const combinedData: movieType[] = [...data1.results, ...data2.results]; // Combine the arrays
       setResultAll([...resultAll, ...combinedData]);
@@ -93,7 +91,6 @@ export default function Search({
     
     setLoading(false)   
     }
-    console.log(combinedData);
   return (
     <>
     <TopNav />

@@ -31,7 +31,6 @@ const Filter = () => {
             movie: false,
             serie: false,
         });
-        console.log(check);
         updateSelectedFilter(check)
         handleOpenFilter(false)
 

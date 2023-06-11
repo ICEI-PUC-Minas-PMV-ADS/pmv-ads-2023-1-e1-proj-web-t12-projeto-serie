@@ -27,12 +27,7 @@ export default function match() {
         <>
         <TopNav />          
         <main 
-            className="flex min-h-screen flex-col items-center pr-28 pl-28" 
-            style={{
-                        'backgroundColor': '#1A1F25', 
-                        'color': 'white',
-                        display: 'grid'
-            }}>       
+            className="flex min-h-screen flex-col items-center pr-28 pl-28">       
                 <div style={styles.MainBlockStyle}>
                     <div>
                         <h1

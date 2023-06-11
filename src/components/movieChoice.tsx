@@ -5,12 +5,13 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import MovieRow from "@/components/movieRow";
+import { CircleNotch } from '@phosphor-icons/react';
    
 export default function MovieChoice(){    
     const themes = {    
         sort_by: [
                     'Popularidade', 
-                    'Taxa de Votos Decrescente', 
+                    'Baixa avaliação', 
                     'Taxa de Votos Crescente', 
                     'Contagem de Votos Descrescente', 
                     'Contagem de Votos Crescente', 
@@ -37,9 +38,7 @@ export default function MovieChoice(){
     const [firstOption, setfirstOption] = useState('')
     const [secondOption, setsecondOption] = useState('')         
     // useState - dynamic match style
-    const [loadMatch, setLoad] = useState(true)   
-    const [isHover1, setIsHover1] = useState(false)
-    const [isHover2, setIsHover2] = useState(false)
+    const [loadMatch, setLoad] = useState(true)
 
     // useEffect
     useEffect(()=>{
@@ -355,70 +354,24 @@ export default function MovieChoice(){
             default:
                 break;
         }        
-    }   
-    // functions - style
-    const handleIsHover1 = () =>{
-        setIsHover1(!isHover1)
-    }
-    const handleIsHover2 = () =>{
-        setIsHover2(!isHover2)
-    }
-
-    // styles
-    const styles = {
-        TableStyle: {        
-            width: '100%',
-            height: '800px',        
-            'marginTop': '50px',        
-            'marginBottom': '50px',     
-        },
-
-        TableLine1Style:{
-            'borderRadius': '10px',                    
-            width: '1000px',
-            height: '400px',        
-            backgroundColor: isHover1 ? 'orange' : 'darkorange',        
-        },
-
-        TableLine2Style:{
-            'borderRadius': '10px',                         
-            width: '1000px',
-            height: '400px',        
-            backgroundColor: isHover2 ? 'mediumseagreen' : 'forestgreen',    
-        },
-
-        circularProgressBarStyle : {
-            width: '500px',
-            height: '500px'
-        },
-
-        sugestionsAreaStyle:{
-            'borderRadius': '10px',                    
-            width: '500px',
-            height: 'fit-content',   
-        },
-
-        refreshOptionStyle:{
-            width: '500px',
-            height: '400px', 
-        }
-    }
+    }  
 
     // jsx
     return(
         <div>
-            <table style={styles.TableStyle}>                              
-                <thead>
+            <div className='flex flex-col'>                              
+                <div>
                     {
                         loadMatch ?
                         (
-                            <tr>
-                                <td><h2 style={{'textAlign': 'left'}}><strong>Qual você prefere?</strong></h2></td>
-                                <td>                            
+                            <div className='flex items-center'>
+                                <div className='flex justify-start w-full'><h2 style={{'textAlign': 'left'}}><strong>Qual você prefere?</strong></h2></div>
+                                <div className='flex  w-full'>                            
                                     <strong>Tópico:</strong> {topic}                             
-                                </td>
-                                <td style={{textAlign: 'right'}}>                               
-                                    <div style={{ width: '60px', height: '60px', marginBottom:'10px', 'textAlign': 'right'}}>                                                                                    
+                                </div>
+                                <div style={{textAlign: 'right'}} className='flex justify-end w-full'>                               
+                                    <div style={{ width: '60px', height: '60px', marginBottom:'10px', 'textAlign': 'right'}}
+                                    >                                                                                    
                                         <CircularProgressbar                                 
                                             className="Counter"                                     
                                             value={count} 
@@ -426,51 +379,34 @@ export default function MovieChoice(){
                                             text={`${count}/5`}
                                         />                                                                                                
                                     </div>
-                                </td>
-                            </tr>
+                                </div>
+                            </div>
                         )
                         :
                         (
                            <div></div>
                         )
                     }
-                </thead>                                
-                <tbody>
+                </div>          
+                </div>                        
+                <div className='w-full flex flex-col'>
                     {
                         loadMatch ?
                         (                           
-                            <tr
-                                style={{
-                                    textAlignLast: 'center',
-                                }}
-                            >                                                               
-                                <td
-                                    className='Option1' 
-                                    style={styles.TableLine1Style} 
-                                    onClick={()=>changeIndex(1)}
-                                    onMouseEnter={()=>handleIsHover1()}
-                                    onMouseLeave={()=>handleIsHover1()}                                                                        
+                            <div className='w-full flex justify-center items-center'>                                                               
+                                <div
+                                    className='bg-orange-400 hover:bg-orange-500 cursor-pointer w-1/2 h-60 rounded-l-lg flex justify-center items-center text-center' 
+                                    onClick={()=>changeIndex(1)}                                                                  
                                     >
-                                        <h1
-                                            style={{
-                                                fontSize: '25px'
-                                            }}
-                                        ><strong>{firstOption}</strong></h1>                     
-                                </td>                        
-                                <td
-                                    className='Option2' 
-                                    style={styles.TableLine2Style} 
-                                    onClick={()=>changeIndex(2)}
-                                    onMouseEnter={()=>handleIsHover2()}
-                                    onMouseLeave={()=>handleIsHover2()}                                                                        
+                                        <strong className='text-xl'>{firstOption}</strong>                     
+                                </div>                        
+                                <div
+                                    className='bg-teal-600 hover:bg-teal-500 cursor-pointer w-1/2 h-60 rounded-r-lg flex justify-center items-center text-center'
+                                    onClick={()=>changeIndex(2)}                                                                 
                                     >
-                                        <h1
-                                            style={{
-                                                fontSize: '25px'
-                                            }}
-                                        ><strong>{secondOption}</strong></h1>
-                                </td>                                
-                            </tr>                                    
+                                        <strong className='text-xl'>{secondOption}</strong>
+                                </div>                                
+                            </div>                                    
                             
                         )
                         :
@@ -480,35 +416,30 @@ export default function MovieChoice(){
                                 && serie !== undefined
                             ) ?
                             (
-                                <tr>
-                                    <td
-                                        style={styles.sugestionsAreaStyle}
+                                <div>
+                                    <div
+                                        // style={styles.sugestionsAreaStyle}
                                     >
                                         <div className="flex flex-col items-center">
                                             <MovieRow key={1} content={movie} title="Sugestões de Filme" rowID={1} />                                            
                                             <MovieRow key={2} content={serie} title="Sugestões de Séries" rowID={2} />                                            
                                         </div>
-                                    </td>
-                                </tr>
+                                    </div>
+                                </div>
                             )
                             :
                             (
-                                <tr>
-                                    <td>
-                                        <Spinner  animation="border" role="status" style={{'display': 'contents', textAlign: 'center'}}>
-                                            <span className="visually-hidden">Loading...</span>
-                                        </Spinner>
-                                    </td>
-                                </tr>
+                                <div>
+                                    <div className='flex justify-center items-center p-28'>
+                                            <CircleNotch className='animate-spin' size={48} weight="fill" /> 
+                                            <span className="visually-hidden text-5xl">Loading...</span>
+                                    </div>
+                                </div>
                             )                        
                         )
                     }   
-                    <tr>
-                        <td
-                            style={{
-                                height: '0px'
-                            }}
-                        >
+                    <div>
+                        <div className='flex'>
                             <Button 
                                 variant="primary"
                                 onClick={()=>refreshOptions()}
@@ -527,10 +458,10 @@ export default function MovieChoice(){
                             >
                                 Reiniciar Match
                             </Button>
-                        </td>  
-                    </tr>                                 
-                </tbody>                
-            </table>                      
+                        </div>  
+                    </div>                                 
+                </div>                
+                           
         </div>
     )
 }

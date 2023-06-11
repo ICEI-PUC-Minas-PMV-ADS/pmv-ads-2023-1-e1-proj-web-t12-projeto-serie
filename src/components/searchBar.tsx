@@ -28,7 +28,6 @@ export default function SearchBar() {
 
     function handleSearch(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault() 
-        console.log(selectedFilter);
         if(selectedFilter.movie === true && selectedFilter.serie === true){
           router.push(`/search/${inputValue}/all`);
         }else if(selectedFilter.movie && !selectedFilter.serie){
