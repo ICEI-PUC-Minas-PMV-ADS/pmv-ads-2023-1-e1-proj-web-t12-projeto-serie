@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import SearchBar from './searchBar'
 import whiteLogo from "../assets/logoWhite.png"
 import darkLogo from "../assets/logoDark.png"
 import Link from 'next/link'
+import { LocalStorageContext } from '@/hooks/useLocalStorage'
+import Filter from './filter'
 
 export default function TopNav() {
   return (
-    <nav className='flex sticky z-50 top-0 flex-col md:flex-row items-center md:justify-between w-full gap-4 p-5 md:pr-20 md:pl-20 dark:bg-zinc-900 bg-gray-300'>
+    <nav className='flex flex-col sticky z-50 top-0 flex-col md:flex-row items-center md:justify-between w-full gap-4 p-5 md:pr-20 md:pl-20 dark:bg-zinc-900 bg-gray-300'>
       <div className='sm:hidden xl:inline'>
         <Link href={"/"}>
        <Image

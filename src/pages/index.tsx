@@ -6,6 +6,9 @@ import BottomNav from "@/components/bottomNav";
 import { title } from "process";
 import MovieRow from "@/components/movieRow";
 import { movieType } from "@/types/interfaces";
+import Filter from "@/components/filter";
+import { useContext } from "react";
+import { LocalStorageContext } from "@/hooks/useLocalStorage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,11 +17,15 @@ type movieResType = {
 }
  
 export default function Home({moviePop, SeriesPop}: InferGetStaticPropsType<typeof getStaticProps>) {
-
+  
+  const { handleOpenFilter, openFilter } = useContext(LocalStorageContext);
 
   return (
-    <main className="`${inter.className}`">
+    <main className="`${inter.className}` transition ">
       <TopNav />
+      
+      {openFilter ? <Filter ></Filter> : null }
+
       <div className="flex min-h-screen flex-col items-center 2xl:pr-40 2xl:pl-40 xl:pr-28 xl:pl-28 sm:flex-wrap">
         {/* <h1 className=''>Popular hoje</h1> */}
 

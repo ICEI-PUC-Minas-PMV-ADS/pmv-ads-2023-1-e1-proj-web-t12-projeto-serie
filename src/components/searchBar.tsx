@@ -1,22 +1,44 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { movieType } from '@/types/interfaces';
 import Dropdown from './dropdown';
 import Link from 'next/link';
+import Filter from './filter';
+import { Funnel } from '@phosphor-icons/react';
+import { LocalStorageContext } from '@/hooks/useLocalStorage';
 
 export default function SearchBar() {
+  const { handleOpenFilter, openFilter, selectedFilter } = useContext(LocalStorageContext);
     const router = useRouter();
     const [inputValue, setInputValue] = useState('');
     const [movieValue, setMovieValue] = useState([]);
     const [tvValue, setTvValue] = useState([]);
+
+    const OpenFilter = () => {
+      if(openFilter === false){
+        handleOpenFilter(true)
+      }else{
+        handleOpenFilter(false)
+      }
+    }
 
     const handleOptionChange = (option: any) => {
     };
 
     function handleSearch(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault() 
-        router.push(`/search/${inputValue}/movie`);
+        console.log(selectedFilter);
+        if(selectedFilter.movie === true && selectedFilter.serie === true){
+          router.push(`/search/${inputValue}/all`);
+        }else if(selectedFilter.movie && !selectedFilter.serie){
+          router.push(`/search/${inputValue}/movie`);
+        }else if(!selectedFilter.movie && selectedFilter.serie){
+          router.push(`/search/${inputValue}/serie`);
+        }
+
+
+
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,18 +84,34 @@ export default function SearchBar() {
           });
       };
     
-
-    const options = [
-        { title: 'Filmes', icon: 'ph ph-funnel' },
-        { title: 'Séries', icon: 'ph ph-funnel' },
-        { title: 'Celebridade', icon: 'ph ph-funnel' },
-        { title: 'Ano', icon: 'ph ph-funnel' },
-       ];
   return (
     <form onSubmit={handleSearch}>
     <div className="flex">
     <div className="flex flex-col">
-    <Dropdown options={options} onChange={handleOptionChange} />
+    <button
+      type="button"
+      data-dropdown-toggle="dropdown" 
+      className="flex-shrink-0 flex md:flex z-10 items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+      onClick={OpenFilter}
+      >
+        <Funnel size={20} className='fill-black dark:fill-white'  />
+        {openFilter ? 
+         <svg
+         className="fill-current h-4 w-4 ml-2"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 20 20"
+         >
+       <path d="M10 14l6-6H4z" />
+       </svg> :
+        <svg
+        className="fill-current h-4 w-4 ml-2 rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        >
+      <path d="M10 14l6-6H4z" />
+      </svg>}
+       
+    </button>
     </div>
 
         <div className="relative w-90">
