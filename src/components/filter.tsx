@@ -247,7 +247,7 @@ const Filter = ({ languages }: any) => {
                     value={selectedLanguage}
                     onChange={handleChange}
                   >
-                    {languages.map((lg: any) => (
+                    {(languages || []).map((lg: any) => (
                       <option key={lg.iso_639_1} value={lg.iso_639_1}>
                         {lg.english_name}
                       </option>
