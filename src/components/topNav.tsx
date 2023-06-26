@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
-import Image from 'next/image'
-import SearchBar from './searchBar'
-import whiteLogo from "../assets/logoWhite.png"
-import darkLogo from "../assets/logoDark.png"
-import Link from 'next/link'
 import { LocalStorageContext } from '@/hooks/useLocalStorage'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useContext } from 'react'
+
+import darkLogo from "../assets/logoDark.png"
+import whiteLogo from "../assets/logoWhite.png"
 import Filter from './filter'
+import SearchBar from './searchBar'
 
 export default function TopNav() {
   return (
@@ -31,9 +32,6 @@ export default function TopNav() {
         </Link>
         <Link className='border-b-sky-500 border-b-2 hover:text-blue-400' href={"/match"}>
         <p>Match</p>
-        </Link>
-        <Link className='border-b-sky-500 hover:text-blue-400 border-b-2' href={"/surprise"}>
-        <p>Surpresa</p>
         </Link>
       </div>
 

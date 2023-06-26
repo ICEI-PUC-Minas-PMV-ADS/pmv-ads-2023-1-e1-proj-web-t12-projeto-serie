@@ -7,7 +7,7 @@ export default function BottomNav() {
   const router = useRouter();
 
   return (
-    <nav className='flex md:hidden justify-center items-center gap-16 md:gap-20 lg:gap-24 bottom-0 dark:bg-zinc-900 bg-gray-300 w-full p-4 sticky z-50'>
+    <nav className="flex md:hidden justify-center items-center gap-16 md:gap-20 lg:gap-24 bottom-0 dark:bg-zinc-900 bg-gray-300 w-full p-4 sticky z-50">
       <Link href="/">
         <div className="flex flex-col items-center justify-center ">
           {router.pathname === "/" ? (
@@ -35,21 +35,6 @@ export default function BottomNav() {
             />
           )}
           <p>Match</p>
-        </div>
-      </Link>
-
-      <Link href="/surprise">
-        <div className="flex flex-col items-center justify-center">
-          {router.pathname === "/surprise" ? (
-            <Confetti size={32} color="#689775" weight="fill" />
-          ) : (
-            <Confetti
-              size={32}
-              className="fill-black dark:fill-white"
-              weight="duotone"
-            />
-          )}
-          <p>Surpresa</p>
         </div>
       </Link>
 
